@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1 style="text-align:center; margin:50px 0;">My Projects</h1>
+
+  <!-- Container where projects will be inserted -->
+  <div id="projects-container" class="projects-grid"></div>
+
+  <!-- Template for a project card -->
+  <template id="project-template">
+    <a href="#" class="project-card">
+      <img src="" alt="">
+      <h3></h3>
+      <p></p>
+    </a>
+  </template>
+
+  <script>
+    fetch("project-list.json") // same folder, so no ../ needed
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("projects-container");
+        const template = document.getElementById("project-template");
+
+        data.forEach(project => {
+          const clone = template.content.cloneNode(true);
+          const card = clone.querySelector(".project-card");
+
+          // link to detail page in same folder
+          card.href = `project-detail.html?id=${project.id}`;
+          card.querySelector("img").src = project.thumbnail; // paths in JSON must be relative to this HTML
+          card.querySelector("img").alt = project.title;
+          card.querySelector("h3").textContent = project.title;
+          card.querySelector("p").textContent = `${project.category} | ${project.technologies}`;
+
+          container.appendChild(clone);
+        });
+      })
+      .catch(err => console.error("Error loading projects:", err));
+  </script>
+</body>
+</html>
