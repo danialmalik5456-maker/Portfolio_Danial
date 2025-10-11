@@ -415,177 +415,253 @@ h6 { font-size: 16px; }
 }
 
 /*---------------------------------------------------*/
-/*	04) RYKER HERO
+/*  04) RYKER HERO – Responsive Version
 /*---------------------------------------------------*/
 
-.ryker_tm_hero{
-	width: 100%;
-	height: 100vh;
-	float: left;
-	position: relative;
-	background-color: #f9f9f9;
-}
-.ryker_tm_hero .container{
-	height: 100vh;
-}
-.ryker_tm_hero .content{
-	width: 100%;
-	height: 100%;
-	clear: both;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.ryker_tm_hero .texts{
-	padding-right: 50px;
-}
-.ryker_tm_hero .job{
-	position: relative;
-	overflow: hidden;
-	margin-bottom: 30px;
-}
-.ryker_tm_hero video{
-	 position: absolute;
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	height: 100%;
-  	-o-object-fit: cover;
-    object-fit: cover;
-  	-o-object-position: center;
-    object-position: center;
-}
-.ryker_tm_hero .job h3{
-	background-color: #f9f9f9;
-	mix-blend-mode: screen;
-	position: relative;
-	z-index: 5;
-	font-size: 72px;
-	font-weight: 900;
-	line-height: 1.3;
-}
-.ryker_tm_hero .desc{
-	width: 100%;
-	float: left;
-	margin-bottom: 40px;
-}
-.ryker_tm_hero .desc p{
-	max-width: 550px;
-	font-size: 17px;
-}
-.ryker_tm_button{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-.ryker_tm_button a{
-	text-decoration: none;
-	color: #fff;
-	background-color: #d1701f;
-	border: 2px solid #d1701f;
-	display: inline-block;
-	padding: 15px 50px;
-	font-family: "Poppins";
-	border-radius: 50px;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.ryker_tm_button a:hover{
-	background-color: transparent;
-	color: #000;
-}
-.ryker_tm_hero .avatar{
-	min-width: 450px;
-	min-height: 450px;
-	position: relative;
-	border-radius: 100%;
-}
-.ryker_tm_hero .avatar .image{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-position:center;
-	background-size: cover;
-	animation: morph 8s ease-in-out infinite 1s;
-	background-blend-mode: multiply;
-	-webkit-box-shadow: inset 0px 0px 0px 18px rgba(255,255,255,.3);
-    -moz-box-shadow: inset 0px 0px 0px 18px rgba(255,255,255,.3);
-    box-shadow: inset 0px 0px 0px 18px rgba(255,255,255,.3);
-}
-@keyframes morph {
-	 0% {
-		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-	}
-	 50% {
-		 border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-	}
-	 100% {
-		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-	}
+.ryker_tm_hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
 }
 
-.short_skills{
-	width: 100%;
-	clear: both;
-	display: flex;
-	align-items: center;
-	line-height: 1;
-	position: absolute;
-	bottom: 8%;
-	left: auto;
+.ryker_tm_hero .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.short_skills .text{
-	position: relative;
+
+.ryker_tm_hero .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
 }
-.short_skills .text:before{
-	position: absolute;
-	content: "";
-	width: 1px;
-	height: 50px;
-	background-color: rgba(0,0,0,.1);
-	top: -5px;
-	left: 100%;
-	margin-left: 30px;
+
+.ryker_tm_hero .texts {
+  flex: 1 1 500px;
+  padding-right: 50px;
+  position: relative;
 }
-.short_skills .text span{
-	line-height: 1.4;
-	font-size: 13px;
-	font-family: "Poppins";
+
+.ryker_tm_hero .job {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
-.short_skills .icons{
-	margin-left: 80px;
+
+.ryker_tm_hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-.short_skills .icons ul{
-	margin: 0px;
-	list-style-type: none;
+
+.ryker_tm_hero .job h3 {
+  background-color: #f9f9f9;
+  mix-blend-mode: screen;
+  position: relative;
+  z-index: 5;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.3;
 }
-.short_skills .icons ul li{
-	margin: 0px 20px 10px 0px;
-	float: left;
-	width: 65px;
-	height: 65px;
-	background-color: #fff;
-	border-radius: 100%;
-	position: relative;
-	box-shadow: 0px 0px 10px rgba(0,0,0,.09);
+
+.ryker_tm_hero .desc {
+  margin-bottom: 40px;
 }
-.short_skills .icons ul li:last-child{margin-right: 0px;}
-.short_skills .icons ul li .svg{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 25px;
-	height: 25px;
+
+.ryker_tm_hero .desc p {
+  max-width: 550px;
+  font-size: 17px;
 }
+
+.ryker_tm_hero .avatar {
+  min-width: 450px;
+  min-height: 450px;
+  position: relative;
+  border-radius: 100%;
+}
+
+.ryker_tm_hero .avatar .image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: morph 8s ease-in-out infinite 1s;
+  background-blend-mode: multiply;
+  box-shadow: inset 0px 0px 0px 18px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/* Social section */
+.short_skills {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1;
+  position: relative;
+  margin-top: 30px;
+}
+
+.short_skills .text {
+  position: relative;
+}
+
+.short_skills .text:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: -5px;
+  left: 100%;
+  margin-left: 30px;
+}
+
+.short_skills .text span {
+  line-height: 1.4;
+  font-size: 13px;
+  font-family: "Poppins";
+}
+
+.short_skills .icons {
+  margin-left: 80px;
+}
+
+.short_skills .icons ul {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+}
+
+.short_skills .icons ul li {
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.short_skills .icons ul li .svg {
+  width: 25px;
+  height: 25px;
+}
+
+/*------------------------------------*/
+/* RESPONSIVE DESIGN */
+/*------------------------------------*/
+@media (max-width: 1024px) {
+  .ryker_tm_hero {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .ryker_tm_hero .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ryker_tm_hero .texts {
+    padding-right: 0;
+  }
+
+  .ryker_tm_hero .job h3 {
+    font-size: 50px;
+  }
+
+  .ryker_tm_hero .desc p {
+    margin: 0 auto;
+  }
+
+  .ryker_tm_hero .avatar {
+    min-width: 300px;
+    min-height: 300px;
+    margin-top: 50px;
+  }
+
+  .short_skills {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .short_skills .text:before {
+    display: none;
+  }
+
+  .short_skills .icons {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .short_skills .icons ul li {
+    width: 55px;
+    height: 55px;
+  }
+
+  .short_skills .icons ul li .svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ryker_tm_hero .job h3 {
+    font-size: 36px;
+  }
+
+  .ryker_tm_hero .avatar {
+    min-width: 220px;
+    min-height: 220px;
+  }
+
+  .ryker_tm_hero .desc p {
+    font-size: 15px;
+  }
+
+  .short_skills .icons ul li {
+    width: 45px;
+    height: 45px;
+  }
+
+  .short_skills .icons ul li .svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 
 /*---------------------------------------------------*/
 /*	05) RYKER ABOUT
@@ -855,57 +931,107 @@ h6 { font-size: 16px; }
 
 
 /*---------------------------------------------------*/
-/*	06.1) Skills Section
+/* 06.1) Skills Section — Fully Responsive */
 /*---------------------------------------------------*/
+
+/* --------------------------------------------------
+   Skills Section — Robust Responsive Layout
+   Replace your current skills CSS with this block.
+   -------------------------------------------------- */
 
 .ryker_tm_skills {
   width: 100%;
   background-color: #f9f9f9;
-  padding: 140px 20px 103px 20px;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* container center + safe width to avoid clipping on large screens */
+.ryker_tm_skills .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* create a predictable inner layout: left title column + right cards column on large screens */
+.skills_inner {
+  display: grid;
+  grid-template-columns: 1fr; /* default single column (mobile-first) */
+  gap: 32px;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+/* Title block */
+.ryker_tm_title {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header_skills {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header_skills span {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   color: #d1701f;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 
 .header_skills h3 {
   font-size: 28px;
-  margin: 0;
+  margin: 0 0 10px 0;
+  color: #222;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .subtitle_skills p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
-  margin-top: 5px;
+  margin: 0;
+  max-width: 720px;
+  line-height: 1.6;
 }
 
+/* Grid of skill cards */
 .grid_skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: start;
 }
 
+/* Each card */
 .skill_card {
   background: #fff;
-  padding: 25px 20px;
+  padding: 22px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
 .skill_card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .skill_card h6 {
   font-size: 16px;
   color: #d1701f;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
@@ -915,6 +1041,117 @@ h6 { font-size: 16px; }
   line-height: 1.6;
   margin: 0;
 }
+
+/* ---------------------------
+   Responsive breakpoints
+   --------------------------- */
+
+/* Desktop: place title left and cards right (two columns) */
+@media (min-width: 992px) {
+  .skills_inner {
+    grid-template-columns: 380px 1fr; /* left column fixed width for title, right fills remaining */
+    gap: 40px;
+  }
+
+  .header_skills h3 {
+    font-size: 34px;
+  }
+
+  .subtitle_skills p {
+    font-size: 15px;
+  }
+
+  .grid_skills {
+    gap: 24px;
+  }
+
+  .ryker_tm_skills {
+    padding: 140px 40px;
+  }
+}
+
+/* Medium screens: slightly smaller title column */
+@media (min-width: 768px) and (max-width: 991px) {
+  .skills_inner {
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+  }
+
+  .header_skills h3 {
+    font-size: 28px;
+  }
+
+  .ryker_tm_skills {
+    padding: 100px 30px;
+  }
+}
+
+/* Mobile-first: single column, centered header and cards */
+@media (max-width: 767px) {
+  .skills_inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .header_skills {
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .header_skills span {
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+
+  .header_skills h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle_skills p {
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 92%;
+  }
+
+  .grid_skills {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skill_card {
+    margin: 0 auto;
+    max-width: 520px; /* keeps cards from stretching edge-to-edge on wide phones */
+    text-align: center;
+    padding: 18px;
+  }
+
+  .skill_card h6 {
+    font-size: 15px;
+  }
+
+  .skill_card p {
+    font-size: 14px;
+  }
+
+  .ryker_tm_skills {
+    padding: 70px 16px;
+  }
+}
+
+/* Smallest phones */
+@media (max-width: 420px) {
+  .header_skills h3 {
+    font-size: 20px;
+  }
+  .skill_card {
+    max-width: 95%;
+    padding: 14px;
+  }
+}
+
+
+
 
 
 /*---------------------------------------------------*/
