@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Capillary Segmentation & Counting Pipeline",
+    "category": "Medical Image Computing / Computer Vision",
+    "technologies": "Python, OpenCV, Scikit-Image",
+    "thumbnail": "../img/projects/id1/thumbnail.png"
+  },
+  {
+    "id": 2,
+    "title": "Medical Image Deblurring & Denoising",
+    "category": "Scene Segmentation & Interpretation, Medical Imaging",
+    "technologies": "Wiener Deconvolution, Bilateral Filtering, Radon Transform, Fourier Analysis, PSNR, SNR, Python, OpenCV",
+    "thumbnail": "../img/projects/id2/dfs.jpg"
+  },
+  {
+    "id": 3,
+    "title": "3D Geometry Reconstruction Using Stereo Vision",
+    "category": "Computer Vision",
+    "technologies": "Python, OpenCV, AKAZE, StereoSGBM, RANSAC, Fundamental/Essential Matrix, SVD, Basler Pylon API",
+    "thumbnail": "../img/projects/id3/thumbnail.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "ANPR Web Application for Stolen Vehicles",
+    "category": "Computer Vision, Web Application, Bachelor's Final Year Project",
+    "technologies": "Python, TensorFlow, Keras",
+    "thumbnail": "../img/projects/id4/thumbnail.webp"
+  },
+  {
+    "id": 5,
+    "title": "Research Analysis & Poster Presentation: Structure from Motion (SfM) Approaches & Applications",
+    "category": "Image processing",
+    "technologies": "SfM, Multi-View Stereo (MVS), 3D Point Clouds, Computer Vision Principle",
+    "thumbnail": "../img/projects/id5/thumbnail.png"
+  },
+  {
+    "id": 6,
+    "title": "Research Analysis & Poster Presentation: Audio Augmentation for Speech Recognition",
+    "category": "Signal processing",
+    "technologies": "SfM, Multi-View Stereo (MVS), 3D Point Clouds, Computer Vision Principle",
+    "thumbnail": "../img/projects/id6/thumbnail2.png"
+  }
+]

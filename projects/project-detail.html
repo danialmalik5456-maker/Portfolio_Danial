@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Details</title>
+  <link rel="stylesheet" href="../css/project-style.css">
+</head>
+<body>
+  <div class="project-container" id="project-detail">
+    <!-- Project details will be loaded here dynamically -->
+  </div>
+
+  <!-- Lightbox popup -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get("id");
+
+    fetch("project-detail.json")
+      .then(response => response.json())
+      .then(data => {
+        const project = data.find(p => p.id == projectId);
+
+        if (project) {
+          let descriptionHTML = '';
+          let bulletGroupOpen = false;
+
+          project.description.forEach(item => {
+            if(item.type === "paragraph") {
+              if(bulletGroupOpen) {
+                descriptionHTML += '</ul>';
+                bulletGroupOpen = false;
+              }
+              descriptionHTML += `<p>${item.text}</p>`;
+            } else if(item.type === "bullet") {
+              if(!bulletGroupOpen) {
+                descriptionHTML += '<ul class="project-description">';
+                bulletGroupOpen = true;
+              }
+              descriptionHTML += `<li>${item.text}</li>`;
+            }
+          });
+          if(bulletGroupOpen) descriptionHTML += '</ul>';
+
+          document.getElementById("project-detail").innerHTML = `
+            <div class="project-hero">
+              <img src="${project.banner}" alt="${project.title}">
+              <div class="hero-overlay">
+                <h1>${project.title}</h1>
+                <p>${project.category}</p>
+              </div>
+            </div>
+
+            <div class="project-main">
+              <div class="project-thumbnail">
+                <img src="${project.thumbnail}" alt="${project.title}">
+              </div>
+              <div class="project-info">
+                <h2>About the Project</h2>
+                ${descriptionHTML}
+                <a href="${project.github}" target="_blank" class="github-btn">GitHub Repo</a>
+                <div class="project-meta">
+                  <p><strong>Technologies:</strong> ${project.technologies}</p>
+                  <p><strong>Duration:</strong> ${project.duration}</p>
+                  <p><strong>Role:</strong> ${project.role}</p>
+                  <p><strong>Outcome:</strong> ${project.outcome}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-gallery">
+              <h2>Project Gallery</h2>
+              <div class="gallery-images">
+                ${project.gallery.map(img => `<img src="${img}" alt="screenshot">`).join('')}
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="project-list.html" class="back-btn">← Back to Projects</a>
+            </div>
+          `;
+
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImg = document.getElementById("lightbox-img");
+          const closeBtn = document.querySelector(".lightbox .close");
+
+          document.querySelectorAll(".gallery-images img").forEach(img => {
+            img.addEventListener("click", () => {
+              lightbox.style.display = "block";
+              lightboxImg.src = img.src;
+            });
+          });
+
+          closeBtn.addEventListener("click", () => {
+            lightbox.style.display = "none";
+          });
+
+          lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) lightbox.style.display = "none";
+          });
+        } else {
+          document.getElementById("project-detail").innerHTML = "<p>Project not found!</p>";
+        }
+      });
+  </script>
+</body>
+</html>
