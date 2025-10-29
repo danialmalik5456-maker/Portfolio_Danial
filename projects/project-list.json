@@ -40,5 +40,13 @@
     "category": "Signal processing",
     "technologies": "SfM, Multi-View Stereo (MVS), 3D Point Clouds, Computer Vision Principle",
     "thumbnail": "../img/projects/id6/thumbnail2.png"
+  },
+  {
+    "id": 7,
+    "title": "EM-Based Brain Tissue Segmentation",
+    "category": "Medical Image Segmentation and Application",
+    "technologies": "Expectation-Maximization, Gaussian Mixture Models, K-Means Clustering, Dice Score",
+    "thumbnail": "../img/projects/id6/thumbnail2.png"
+  },
   }
 ]
