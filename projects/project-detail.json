@@ -290,6 +290,53 @@
       "../img/projects/id6/2.png",
       "../img/projects/id6/3.png"
     ]
+},
+  {
+    "id": 7,
+    "title": "Expectation-Maximization (EM) Based Brain Tissue Segmentation",
+    "category": "Medical Image Processing, Machine Learning, Brain Segmentation, Clustering",
+    "technologies": "Expectation-Maximization (EM), Gaussian Mixture Models (GMM), K-Means Clustering, Dice Score, Unimodal/Multimodal Segmentation,
+    "thumbnail": "../img/projects/id7/1.png",
+    "banner": "../img/projects/id7/banner.png",
+    "description": [
+        {
+            "type": "paragraph",
+            "text": "Implementation and comparative analysis of two initialization strategies for the **Expectation-Maximization (EM) algorithm** used for **brain tissue segmentation** with Gaussian Mixture Models (GMM). The goal was to accurately segment the brain parenchyma into $K=3$ tissue classes: **Cerebrospinal Fluid (CSF)**, **Gray Matter (GM)**, and **White Matter (WM)**."
+        },
+        {
+            "type": "bullet",
+            "text": "The core comparison focused on **Random Initialization** (the baseline) versus **K-Means Clustering Initialization** for setting the initial means ($\mu_k$), covariance matrices ($\Sigma_k$), and mixing coefficients ($\pi_k$) of the GMM."
+        },
+        {
+            "type": "bullet",
+            "text": "The pipeline was designed to handle both **Unimodal Segmentation** (using T1-weighted MRI only) and **Multimodal Segmentation** (combining T1 and T2_FLAIR MRI sequences to create a 2D feature vector for classification)."
+        },
+        {
+            "type": "bullet",
+            "text": "Preprocessing steps included loading NIfTI data, applying a **Median Filter** for noise reduction, and generating a **Brain Mask** to focus the EM algorithm on relevant voxels."
+        },
+        {
+            "type": "bullet",
+            "text": "Segmentation accuracy was quantitatively evaluated using the **Dice Score** against ground truth labels for each tissue class (CSF, GM, WM)."
+        },
+        {
+            "type": "paragraph",
+            "text": "The results demonstrated that using **K-Means Initialization** significantly improves the stability and consistency of the EM algorithm, often leading to better Dice Scores by avoiding suboptimal local minima compared to purely random starts."
+        }
+    ],
+    "duration": "Academic Project",
+    "role": "Machine Learning Implementer & Analyst",
+    "outcome": "Successfully implemented and benchmarked the EM segmentation pipeline across different initialization and modality settings. Demonstrated advanced technical skills in custom EM implementation, medical image preprocessing (Nibabel, SciPy), and quantitative evaluation of segmentation results, proving the superiority of KMeans initialization for this task.",
+    "github": "N/A (Implementation Files Provided)",
+    "gallery": [
+        "../img/projects/id7/labels_em_sub1.jpg",
+        "../img/projects/id7/prob_csf_sub1.jpg",
+        "../img/projects/id7/prob_gm_sub1.jpg",
+        "../img/projects/id7/prob_wm_sub1.jpg",
+        "../img/projects/id7/Overlay case 1.png",
+        "../img/projects/id7/banner.png",
+        "../img/projects/id7/kmeans multi segmentation case 4.png"
+    ]
 }
 
 ]
