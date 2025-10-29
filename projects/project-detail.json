@@ -295,7 +295,7 @@
     "id": 7,
     "title": "Expectation-Maximization (EM) Based Brain Tissue Segmentation",
     "category": "Medical Image Processing, Machine Learning, Brain Segmentation, Clustering",
-    "technologies": "Expectation-Maximization (EM), Gaussian Mixture Models (GMM), K-Means Clustering, Dice Score, Unimodal/Multimodal Segmentation,
+    "technologies": "Expectation-Maximization (EM), Gaussian Mixture Models (GMM), K-Means Clustering, Dice Score, Unimodal/Multimodal Segmentation",
     "thumbnail": "../img/projects/id7/1.png",
     "banner": "../img/projects/id7/banner.png",
     "description": [
