@@ -327,7 +327,7 @@
     "duration": "Academic Project",
     "role": "Machine Learning Implementer & Analyst",
     "outcome": "Successfully implemented and benchmarked the EM segmentation pipeline across different initialization and modality settings. Demonstrated advanced technical skills in custom EM implementation, medical image preprocessing (Nibabel, SciPy), and quantitative evaluation of segmentation results, proving the superiority of KMeans initialization for this task.",
-    "github": "N/A (Implementation Files Provided)",
+    "github": "https://github.com/malikdanialahmed/Brain-Image-Segmentation-using-Expectation-Maximization-EM-",
     "gallery": [
         "../img/projects/id7/labels_em_sub1.jpg",
         "../img/projects/id7/prob_csf_sub1.jpg",
