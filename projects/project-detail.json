@@ -301,7 +301,7 @@
     "description": [
         {
             "type": "paragraph",
-            "text": "Implementation and comparative analysis of two initialization strategies for the Expectation-Maximization (EM) algorithm used for brain tissue segmentation with Gaussian Mixture Models (GMM). The goal was to accurately segment the brain parenchyma into $K=3$ tissue classes: Cerebrospinal Fluid (CSF), Gray Matter (GM), and White Matter (WM)."
+            "text": "Implementation and comparative analysis of two initialization strategies for the Expectation-Maximization (EM) algorithm used for brain tissue segmentation with Gaussian Mixture Models (GMM). The goal was to accurately segment the brain parenchyma into K=3 tissue classes: Cerebrospinal Fluid (CSF), Gray Matter (GM), and White Matter (WM)."
         },
         {
             "type": "bullet",
