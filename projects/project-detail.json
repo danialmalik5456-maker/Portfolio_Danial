@@ -305,7 +305,7 @@
         },
         {
             "type": "bullet",
-            "text": "The core comparison focused on **Random Initialization** (the baseline) versus **K-Means Clustering Initialization** for setting the initial means ($\mu_k$), covariance matrices ($\Sigma_k$), and mixing coefficients ($\pi_k$) of the GMM."
+            "text": "The core comparison focused on **Random Initialization** (the baseline) versus **K-Means Clustering Initialization** for setting the initial means, covariance matrices, and mixing coefficients of the GMM."
         },
         {
             "type": "bullet",
